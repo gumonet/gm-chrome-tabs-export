@@ -15,7 +15,7 @@
       "storage"
     ],
     "action": {
-      "default_title": "Tab Gator",
+      "default_title": "GM Save Tabs",
       "default_icon": "assets/icon.png",
       "default_popup": "templates/popup.html"
     }
