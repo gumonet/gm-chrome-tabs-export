@@ -1,0 +1,22 @@
+{
+    "name": "GM Chrome Tabs Export",
+    "description": "Collects all open tabs and export to a file",
+    "background": {
+      "service_worker": "./assets/js/background.js"
+    },
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting",
+      "identity",
+      "declarativeContent",
+      "storage"
+    ],
+    "action": {
+      "default_title": "Tab Gator",
+      "default_icon": "assets/icon.png",
+      "default_popup": "templates/popup.html"
+    }
+  }

@@ -1,0 +1,15 @@
+{
+  "name": "gm-chrome-save-tabs",
+  "version": "1.0.0",
+  "description": "\"Collec opens tab and save into clipboard\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-gumonet:gumonet/gm-chrome-tabs-export.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
