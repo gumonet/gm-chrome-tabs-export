@@ -14,12 +14,26 @@ a {
 * {
   box-sizing: border-box;
 }
+.button-save{
+  color: #0797e1;
+  border: solid 1px #c0e6f9;
+  background-color: #edf9ff;
+  display: flex;
+  gap: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.icon-drive{
+  width: 15px;
+  height: 15px;
+  background-size: 98%;
+}
 
 .container{
-  margin: 10px;
   width: 300px;
   height: auto;
-  padding: 1rem;
+  padding: 0.8rem;
   .buttons-container {
     display: flex;
     justify-content: flex-end;
@@ -29,24 +43,96 @@ a {
     flex-direction: column;
     gap: 7px;
     margin: 1rem auto;
-    max-height: 300px;
+    max-height: 500px;
     overflow-y: scroll;
     padding-right: 5px;
     a.tab-item{
-      padding: 0.5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 0.5rem;
+      .content-text{
+        width: calc(100% - 30px);
+      }
+      img.icon-img{
+        width: 20px;
+        height: 20px;
+      }
       h3{
         margin: 0;
         padding: 0;
-        font-size: 16px;
+        font-size: 13px;
         color: #2e2e2e;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 600;
       }
       span{
-        font-size: 14px;
+        font-size: 12px;
         color: #525252;
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
-      width: 100%;
-      border-radius: 8px;
-      background: #f1f1f1;
     }
+  }
+}
+
+#messages-content{
+  width: 100%;
+  .message-item{
+    margin: 0.3rem auto;
+    h3{
+      margin: 0;
+    }
+    p{
+      text-align: left;
+    }
+    text-align: center;
+    padding: 0.5rem;
+    &.error{
+      border:solid 1px #fcdadf;
+      color: #c7254e;
+      background-color: #f9f2f4;
+    }
+    &.success{
+      border:solid 1px #bce8f1;
+      color: #31708f;
+      background-color: #d9edf7;
+    }
+  }
+}
+
+.spinner-content{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 6px solid #0797e1;
+  border-color: #0797e1 transparent #0797e1 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

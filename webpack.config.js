@@ -8,7 +8,33 @@ module.exports = {
                     loader: "babel-loader",
                 }
             },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'css/main.css',
+                        }
+                    },
+                    {
+                        loader: 'extract-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            },
+            {
+                type: "asset",
+                test: /\.(png|svg|jpg|jpeg|gif)$/i
+            }
         ]
     }
 }
-https://www.youtube.com/watch?v=N6ZR4M1z6Yc
